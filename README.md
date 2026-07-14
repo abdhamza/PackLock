@@ -68,6 +68,20 @@ Use `-o/--output` on either command to choose a custom output path.
 
 ---
 
+## 🧑‍💻 Development
+
+Clone the repo and install it in editable mode with the test dependencies:
+```bash
+pip install -e ".[dev]"
+```
+
+Run the test suite:
+```bash
+pytest -v
+```
+
+---
+
 ## 📄 License
 
 PackLock is licensed under the [GNU General Public License v3.0](LICENSE).
