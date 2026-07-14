@@ -1,5 +1,8 @@
 # 📦 PackLock
 
+[![Tests](https://github.com/abdhamza/PackLock/actions/workflows/tests.yml/badge.svg)](https://github.com/abdhamza/PackLock/actions/workflows/tests.yml)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+
 > **"Pack it. Lock it. Share it safely."**
 
 PackLock is a lightweight, secure desktop utility that bundles entire directories into a single compressed archive and encrypts them using military-grade **AES-256 (GCM)** encryption. Perfect for sharing sensitive documents, private images, or entire project folders across public networks without worrying about prying eyes.
@@ -70,15 +73,12 @@ Use `-o/--output` on either command to choose a custom output path.
 
 ## 🧑‍💻 Development
 
-Clone the repo and install it in editable mode with the test dependencies:
-```bash
-pip install -e ".[dev]"
-```
+See [CONTRIBUTING.md](CONTRIBUTING.md) for setting up a dev environment,
+running the test suite, and submitting a pull request. All PRs must pass CI
+and get at least one review before they can be merged into `main`.
 
-Run the test suite:
-```bash
-pytest -v
-```
+Found a security issue? Please follow the private disclosure process in
+[SECURITY.md](SECURITY.md) instead of opening a public issue.
 
 ---
 
