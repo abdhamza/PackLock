@@ -45,24 +45,26 @@ Make sure you have Python 3.8+ installed on your computer.
    git clone https://github.com/abdhamza/PackLock.git
    cd PackLock
    ```
-2. Install the dependencies:
+2. Install PackLock (editable install, exposes the `packlock` command):
    ```bash
-   pip install -r requirements.txt
+   pip install -e .
    ```
 
 ### Usage
 
 **Lock a folder:**
 ```bash
-python packlock.py lock /path/to/your/folder
+packlock lock /path/to/your/folder
 ```
-You'll be prompted for a password. PackLock will produce a `folder.vault` file next to the original folder.
+You'll be prompted for a password (twice, to confirm). PackLock produces a `folder.vault` file next to the original folder.
 
 **Unlock a vault:**
 ```bash
-python packlock.py unlock folder.vault
+packlock unlock folder.vault
 ```
-Enter the same password to restore the original folder contents.
+Enter the same password to restore the original folder contents into `folder/`.
+
+Use `-o/--output` on either command to choose a custom output path.
 
 ---
 
