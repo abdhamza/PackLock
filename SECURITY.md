@@ -8,7 +8,7 @@ If you discover a security vulnerability (e.g. a flaw in the encryption
 scheme, key derivation, or archive handling), please **do not open a public
 GitHub issue**. Instead, report it privately by emailing:
 
-**ibrahim.khan@amaskit-tech.com**
+**engr.abdullah.hamza@gmail.com**
 
 Please include:
 - A description of the vulnerability and its potential impact.
