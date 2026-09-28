@@ -40,7 +40,7 @@ PackLock is written in pure Python and runs on both **Windows** and **Linux** (a
 ## 🛠️ Quick Start
 
 ### Prerequisites
-Make sure you have Python 3.8+ installed on your computer.
+Make sure you have Python 3.10+ installed on your computer.
 
 ### Installation
 1. Clone this repository:
