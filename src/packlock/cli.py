@@ -23,12 +23,21 @@ def _read_password(confirm: bool) -> str:
     return password
 
 
+def _default_vault_path(folder_path: Path) -> Path:
+    # Append rather than use with_suffix(): it fails on "." and truncates
+    # dotted names like "my.photos".
+    resolved = folder_path.resolve()
+    if not resolved.name:
+        raise SystemExit(f"Cannot derive a vault name for '{folder_path}'; use --output.")
+    return resolved.with_name(resolved.name + VAULT_SUFFIX)
+
+
 def lock(folder: str, output: Optional[str]) -> None:
     folder_path = Path(folder)
     if not folder_path.is_dir():
         raise SystemExit(f"'{folder}' is not a directory.")
 
-    output_path = Path(output) if output else folder_path.with_suffix(VAULT_SUFFIX)
+    output_path = Path(output) if output else _default_vault_path(folder_path)
     password = _read_password(confirm=True)
 
     print(f"Packing '{folder_path}'...")
